@@ -76,3 +76,68 @@ span {
     padding: 10px;
 }
 
+@media screen and (max-width: 420px) {
+
+    .img1 {
+        top: -1491px;
+        left: -1300px;
+        width: 596%;
+    }
+    
+    .img2 {
+        top: -1059px;
+        left: 556px;
+        width: 596%;
+    }
+
+    .card {
+        width: 958px;
+        height: 1013px;
+        top: 69%;
+        left: 26%;
+        border-radius: 40px;
+    }
+    
+    .patternCard {
+        width: 100%;
+    }
+
+    body {
+        font-size: 60px;
+    }
+
+    .picture {
+        border-radius: 50%;
+        border: white solid 15px;
+        width: 288px;
+        height: 288px;
+        top: 216px;
+        left: 32%;
+    }
+
+    .picture img {
+        width: 100%;
+    }
+    
+    span {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .age {
+        font-size: 60px;
+    }
+    
+    .city {
+        font-size: 50px;
+    }
+    
+    .mainInfo {
+        margin-top: 200px;
+        margin-bottom: 68px;
+    }
+    
+    .info {
+        border-top:  hsl(233, 13%, 88%) solid 2px;
+    }
+}
