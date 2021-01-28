@@ -1,143 +1,89 @@
-body {
+/* variables */
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --dark-grayblue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --font: 'Kumbh Sans', sans-serif;
+    --larg-font: 18px;
+    --small-font: 12px;
+    --med-font: 16px;
+}
+
+* {
     box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: var(--font);
     font-size: 18px;
-    background-color:  hsl(185, 75%, 39%);
+    background-color: var(--dark-cyan);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    background-repeat: no-repeat, no-repeat;
+    height: 100%;
 }
 
-.img1, .img2 {
-    position: relative;
-}
-
-.img1 {
-    top: -560px;
-    left: -300px;
-}
-
-.img2 {
-    top: -640px;
-    left: 640px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .card {
-    position: absolute;
     width: 350px;
     height: 370px;
-    top: 155px;
-    left: 515px;
     background-color: white;
+    background-image: url(./images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px 1px var(--dark-grayblue);
     border-radius: 15px;
-    overflow :hidden;
+    overflow: hidden;
     text-align: center;
+    position: relative;
 }
 
 .picture {
     border-radius: 50%;
     border: white solid 5px;
-    position: absolute;
-    overflow :hidden;
+    overflow: hidden;
     width: 96px;
     height: 96px;
-    top: 85px;
-    left: 118px;
+    margin-top: 90px;
 }
 
 p {
     font-weight: bold;
-    color:hsl(229, 23%, 23%) 
+    color: var(--dark-blue);
 }
 
 span {
     font-weight: normal;
-    font-size: 12px;
-    color: hsl(227, 10%, 46%);
+    font-size: var(--small-font);
+    color: var(--dark-grayblue);
     display: block;
     line-height: 20px;
 }
 
 .age {
-    font-size: 18px;
+    font-size: var(--larg-font);
     display: inline;
 }
 
 .city {
-    font-size: 14px;
+    font-size: var(--med-font);
 }
 
 .mainInfo {
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .info {
-    border-top:  hsl(233, 13%, 88%) solid 0.25px;
+    border-top: hsl(233, 13%, 88%) solid 0.25px;
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
-}
-
-@media screen and (max-width: 420px) {
-
-    .img1 {
-        top: -1491px;
-        left: -1300px;
-        width: 596%;
-    }
-    
-    .img2 {
-        top: -1059px;
-        left: 556px;
-        width: 596%;
-    }
-
-    .card {
-        width: 958px;
-        height: 1013px;
-        top: 69%;
-        left: 26%;
-        border-radius: 40px;
-    }
-    
-    .patternCard {
-        width: 100%;
-    }
-
-    body {
-        font-size: 60px;
-    }
-
-    .picture {
-        border-radius: 50%;
-        border: white solid 15px;
-        width: 288px;
-        height: 288px;
-        top: 216px;
-        left: 32%;
-    }
-
-    .picture img {
-        width: 100%;
-    }
-    
-    span {
-        font-size: 40px;
-        line-height: 50px;
-    }
-    
-    .age {
-        font-size: 60px;
-    }
-    
-    .city {
-        font-size: 50px;
-    }
-    
-    .mainInfo {
-        margin-top: 200px;
-        margin-bottom: 68px;
-    }
-    
-    .info {
-        border-top:  hsl(233, 13%, 88%) solid 2px;
-    }
+    padding: 30px;
 }
